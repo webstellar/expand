@@ -9,3 +9,7 @@
 .hide-scroll-bar::-webkit-scrollbar {
   display: none;
 }
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}

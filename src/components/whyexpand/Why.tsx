@@ -13,7 +13,7 @@ interface pageProps {
 
 const Why: React.FC<pageProps> = ({ data }) => {
   return (
-    <div className="bg-gray-50 py-10 mb-10 md:mb-20">
+    <div className="py-10 mb-10 md:mb-20">
       <div className="flex flex-wrap md:flex-nowrap mx-auto flex-row max-w-7xl items-center justify-start p-6 lg:px-6 gap-x-10 gap-y-10 md:gap-y-0">
         <div className="md:basis-3/5">
           {data?.whyusimage ? (
