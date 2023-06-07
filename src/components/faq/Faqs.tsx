@@ -12,22 +12,20 @@ interface pageProps {
   data: landingpage;
 }
 
-const How: React.FC<pageProps> = ({ data }) => {
+const Faqs: React.FC<pageProps> = ({ data }) => {
   return (
     <div className="bg-transparent flex flex-wrap md:flex-nowrap mx-auto flex-row max-w-7xl items-center justify-between p-6 lg:px-6 md:gap-x-32 gap-y-10 md:gap-y-0 mb-10 md:mb-20">
-      <div className="flex flex-col md:basis-2/5 text-left md:gap-y-5 order-1">
-        <div className="text-lemon-green text-xl font-bold">
-          {data.howitworks}
-        </div>
+      <div className="flex flex-col md:basis-2/5 text-left md:gap-y-5 md:order-2 order-1">
+        <div className="text-lemon-green text-xl font-bold">{data.faqs}</div>
         <div className="text-gray-950 text-4xl md:text-6xl font-bold leading-tight mb-5 md:mb-0">
-          <PortableText value={data.howitworkheadliner} />
+          <PortableText value={data.faqsheadliner} />
         </div>
         <div className="text-base">
-          <PortableText value={data.howitworkcontent} />
+          <PortableText value={data.faqsdescription} />
         </div>
       </div>
 
-      <div className="order-2 md:basis-3/5 flex flex-col gap-y-5">
+      <div className="order-2 md:order-1 md:basis-3/5 flex flex-col gap-y-5">
         {data.steps.map((step) => (
           <div key={step._id} className="flex flex-row">
             <div>
@@ -52,4 +50,4 @@ const How: React.FC<pageProps> = ({ data }) => {
   );
 };
 
-export default How;
+export default Faqs;
