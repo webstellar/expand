@@ -10,7 +10,7 @@ const initState: valueProps = {
   firstname: "",
   lastname: "",
   email: "",
-  phone: "",
+  phonenumber: "",
   industry: "",
   website: "",
 };

@@ -5,7 +5,7 @@ type feedbackProps = {
   firstname?: string;
   lastname?: string;
   email?: string;
-  phone?: string;
+  phonenumber?: string;
   industry?: string;
   website?: string;
 };
