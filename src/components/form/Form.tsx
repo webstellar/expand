@@ -1,8 +1,50 @@
-import React from "react";
-import { classNames } from "@/utils/classNames";
+import React, { useState } from "react";
+import { toast, ToastContainer } from "react-toastify";
+import { sendContactForm } from "@/utils/api";
+
+type valueProps = {
+  [key: string]: string;
+};
+
+const initState: valueProps = {
+  firstname: "",
+  lastname: "",
+  email: "",
+  phone: "",
+  industry: "",
+  website: "",
+};
 
 const Form = () => {
-  const handleSubmit = (): void => {};
+  const [state, setState] = useState(initState);
+
+  const handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLSelectElement>
+  ) =>
+    setState((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    //console.log(JSON.stringify(state));
+    try {
+      await sendContactForm(state);
+      toast("Your details was sent", {
+        hideProgressBar: true,
+        autoClose: 2000,
+        type: "success",
+      });
+      setState(initState);
+    } catch (error) {
+      setState((prev) => ({
+        ...prev,
+      }));
+    }
+  };
 
   return (
     <div className="mx-auto">
@@ -22,6 +64,8 @@ const Form = () => {
               className="bg-white border border-gray-950 text-gray-900 text-lg block w-full p-5"
               placeholder="Your full name"
               required
+              value={state.firstname}
+              onChange={handleChange}
             />
           </div>
           <div className="basis-2/4">
@@ -38,6 +82,8 @@ const Form = () => {
               className="bg-white border border-gray-950 text-gray-900 text-lg block w-full p-5"
               placeholder="Your full name"
               required
+              value={state.lastname}
+              onChange={handleChange}
             />
           </div>
         </div>
@@ -56,6 +102,8 @@ const Form = () => {
             className="bg-white border border-gray-950 text-gray-900 text-lg block w-full p-5"
             placeholder="Your phone no."
             required
+            value={state.email}
+            onChange={handleChange}
           />
         </div>
 
@@ -73,6 +121,8 @@ const Form = () => {
             className="bg-white border border-gray-950 text-gray-900 text-lg block w-full p-5"
             placeholder="Your phone no."
             required
+            value={state.phonenumber}
+            onChange={handleChange}
           />
         </div>
 
@@ -89,6 +139,8 @@ const Form = () => {
             id="industry"
             form="industry"
             className="bg-white border focus:rounded-none border-gray-950 text-gray-900 text-lg block w-full p-5"
+            value={state.industry}
+            onChange={handleChange}
           >
             <option value="winery">Winery</option>
             <option value="technology">Technology</option>
@@ -111,16 +163,20 @@ const Form = () => {
             className="bg-white border border-gray-950 text-gray-900 text-lg block w-full p-5"
             placeholder="www.businessname.com"
             required
+            value={state.website}
+            onChange={handleChange}
           />
         </div>
 
         <button
           type="submit"
           className="border bg-lemon-green text-gray-950 py-5 px-10 text-lg font-medium w-1/2"
+          disabled={!state.email || !state.firstname || !state.lastname}
         >
           SEND
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 };

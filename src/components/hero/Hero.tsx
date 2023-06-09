@@ -14,10 +14,10 @@ interface pageProps {
 
 const Hero: React.FC<pageProps> = ({ data }) => {
   return (
-    <div className="relative bg-bottle-green h-[100vh] md:h-[800px] mb-10 md:mb-20">
+    <div className="relative bg-bottle-green h-[100vh] md:h-[800px] mb-10">
       <div className="mx-auto flex flex-row flex-wrap md:flex-nowrap max-w-7xl items-center justify-between p-6 lg:px-6 absolute left-0 right-0 bottom-0 top-0 gap-x-5 gap-y-10 md:gap-y-0">
-        <div className="text-center md:text-left md:basis-3/5 md:order-1 order-2 flex flex-col gap-y-10 md:gap-y-32">
-          <div className="text-gray-50 text-4xl md:text-6xl font-bold leading-normal">
+        <div className="text-center md:text-left md:basis-3/5 md:order-1 order-2 flex flex-col gap-y-5 md:gap-y-32">
+          <div className="text-gray-50 text-3xl md:text-6xl font-bold leading-normal">
             {data?.heroheadliner}
           </div>
           <div className="text-gray-950 font-medium text-xl md:text-3xl">
@@ -30,7 +30,7 @@ const Hero: React.FC<pageProps> = ({ data }) => {
           {data.heroimage ? (
             <Image src={data.heroimage} alt={data.name} />
           ) : (
-            <Image src={Heroimage} alt="hero_image" />
+            <Image src={Heroimage} alt="hero_image" className="py-10 md:px-5" />
           )}
         </div>
       </div>

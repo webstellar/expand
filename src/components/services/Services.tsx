@@ -14,8 +14,8 @@ interface pageProps {
 
 const Services: React.FC<pageProps> = ({ data }) => {
   return (
-    <div className="bg-gray-50 py-10">
-      <div className="flex flex-wrap md:flex-nowrap mx-auto flex-row max-w-7xl items-center justify-start p-6 lg:px-6 gap-x-5 gap-y-10 md:gap-y-0 mb-10 md:mb-20">
+    <div className="bg-gray-50 py-10" id="services">
+      <div className="flex flex-wrap md:flex-nowrap mx-auto flex-row max-w-7xl items-center justify-start p-6 lg:px-6 gap-x-5 gap-y-10 md:gap-y-0 mb-10">
         <div className="flex flex-col md:basis-2/5 text-left md:gap-y-5 md:order-1 order-2">
           <div className="text-lemon-green text-xl font-bold">
             {data.servicetitle}
@@ -32,7 +32,7 @@ const Services: React.FC<pageProps> = ({ data }) => {
           <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-0 ">
             {data.services.map((service) => (
               <div className="inline-block px-3" key={service._id}>
-                <div className="w-72 h-72 max-w-xs overflow-hidden rounded-lg shadow-md bg-gray-50 hover:bg-lemon-green hover:shadow-xl transition-shadow duration-300 ease-in-out text-center flex flex-wrap justify-center items-center hover:text-gray-50 p-5">
+                <div className="w-72 h-72 max-w-xs overflow-hidden rounded-lg shadow-md bg-gray-50 hover:bg-lemon-green hover:shadow-xl transition-shadow duration-300 ease-in-out text-center flex flex-wrap justify-center items-center hover:text-gray-50 p-5 overflow-x-hidden">
                   {service.icon ? (
                     <>
                       <Image src={service.icon} alt={service.serviceName} />

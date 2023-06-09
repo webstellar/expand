@@ -19,16 +19,16 @@ interface linkProps {
 const links: linkProps[] = [
   {
     id: 1,
-    title: "Home",
-    url: "/",
-  },
-  {
-    id: 3,
     title: "Why Choose Us",
     url: "#whychooseus",
   },
   {
-    id: 4,
+    id: 1,
+    title: "Our Services",
+    url: "#services",
+  },
+  {
+    id: 3,
     title: "How it Works",
     url: "#howitworks",
   },

@@ -6,9 +6,11 @@ import Why from "@/components/whyexpand/Why";
 import How from "@/components/how/How";
 import Getstarted from "@/components/getstarted/Getstarted";
 import Faqs from "@/components/faq/Faqs";
+import Toast from "@/components/Toast";
 
 export default async function Home() {
   const pages = await getLandingPage();
+
   return (
     <div>
       {pages.map((page) => (

@@ -1,7 +1,9 @@
 import "./globals.css";
-import { Inter, DM_Sans } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const dm_sans = DM_Sans({
   display: "swap",
@@ -24,6 +26,7 @@ export default function RootLayout({
       <body className={dm_sans.className}>
         <Header />
         {children}
+        <ToastContainer />
         <Footer />
       </body>
     </html>

@@ -14,7 +14,10 @@ interface pageProps {
 
 const How: React.FC<pageProps> = ({ data }) => {
   return (
-    <div className="bg-transparent flex flex-wrap md:flex-nowrap mx-auto flex-row max-w-7xl items-center justify-between p-6 lg:px-6 md:gap-x-32 gap-y-10 md:gap-y-0 mb-10 md:mb-20">
+    <div
+      className="bg-transparent flex flex-wrap md:flex-nowrap mx-auto flex-row max-w-7xl items-center justify-between p-6 lg:px-6 py-10 md:gap-x-32 gap-y-10 md:gap-y-0 mb-10 align-middle"
+      id="howitworks"
+    >
       <div className="flex flex-col md:basis-2/5 text-left md:gap-y-5 order-1">
         <div className="text-lemon-green text-xl font-bold">
           {data.howitworks}
