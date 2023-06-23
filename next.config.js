@@ -1,13 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "apicdn.sanity.io",
-        port: "",
-      },
-    ],
+    domains: ["cdn.sanity.io"],
   },
 };
 

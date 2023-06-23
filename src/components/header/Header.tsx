@@ -23,7 +23,7 @@ const links: linkProps[] = [
     url: "#whychooseus",
   },
   {
-    id: 1,
+    id: 2,
     title: "Our Services",
     url: "#services",
   },
@@ -33,7 +33,7 @@ const links: linkProps[] = [
     url: "#howitworks",
   },
   {
-    id: 5,
+    id: 4,
     title: "FAQs",
     url: "#faqs",
   },

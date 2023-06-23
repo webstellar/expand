@@ -40,7 +40,7 @@ const Faqs: React.FC<pageProps> = ({ data }) => {
       <div className="order-2 md:basis-3/5">
         <div className="flex flex-col items-center justify-center text-black bg-transparent dark:text-white w-full">
           {data.faqsanswers.map((item, i) => (
-            <div className="flex flex-col" key={item._id}>
+            <div className="flex flex-col" key={i}>
               <div
                 className="text-xl flex items-center justify-between cursor-pointer p-2 text-gray-950"
                 onClick={() => select(i)}

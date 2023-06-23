@@ -30,12 +30,17 @@ const Services: React.FC<pageProps> = ({ data }) => {
 
         <div className="order-1 md:order-2 md:basis-3/5 flex overflow-x-scroll pb-10 hide-scroll-bar">
           <div className="flex flex-nowrap lg:ml-40 md:ml-20 ml-0 ">
-            {data.services.map((service) => (
-              <div className="inline-block px-3" key={service._id}>
+            {data.services.map((service, i) => (
+              <div className="inline-block px-3" key={i}>
                 <div className="w-72 h-72 max-w-xs overflow-hidden rounded-lg shadow-md bg-gray-50 hover:bg-lemon-green hover:shadow-xl transition-shadow duration-300 ease-in-out text-center flex flex-wrap justify-center items-center hover:text-gray-50 p-5 overflow-x-hidden">
                   {service.icon ? (
                     <>
-                      <Image src={service.icon} alt={service.serviceName} />
+                      <Image
+                        src={service.icon}
+                        alt={service.serviceName}
+                        width={100}
+                        height={100}
+                      />
                     </>
                   ) : (
                     <>

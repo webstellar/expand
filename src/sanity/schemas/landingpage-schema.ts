@@ -20,7 +20,7 @@ const landingPage = {
       name: "featuredimage",
       title: "Featured Image",
       type: "image",
-      options: { hotspot: true, accept: "image/svg+xml", svg: true },
+      options: { hotspot: true },
       fields: [
         {
           name: "alt",
@@ -53,7 +53,7 @@ const landingPage = {
       name: "heroimage",
       title: "Hero Image",
       type: "image",
-      options: { hotspot: true, accept: "image/svg+xml", svg: true },
+      options: { hotspot: true },
       fields: [
         {
           name: "alt",

@@ -31,16 +31,22 @@ const How: React.FC<pageProps> = ({ data }) => {
       </div>
 
       <div className="order-2 md:basis-3/5 flex flex-col gap-y-5">
-        {data.steps.map((step) => (
-          <div key={step._id} className="flex flex-row">
+        {data.steps.map((step, i) => (
+          <div key={i} className="flex flex-row">
             <div>
               {step.stepicon ? (
                 <>
-                  <Image src={step.stepicon} alt={step.title} />
+                  <Image
+                    src={step.stepicon}
+                    alt={step.title}
+                    width={100}
+                    height={100}
+                    className="px-4"
+                  />
                 </>
               ) : (
                 <>
-                  <Image src={Step1} alt="step1" />
+                  <Image src={Step1} alt="step1" width={300} height={300} />
                 </>
               )}
             </div>

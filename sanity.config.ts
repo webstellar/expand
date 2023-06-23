@@ -1,6 +1,3 @@
-import blog from "@/sanity/schemas/blog-schema";
-import experts from "@/sanity/schemas/expert-schema";
-import landingPage from "@/sanity/schemas/landingpage-schema";
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import schemas from "@/sanity";

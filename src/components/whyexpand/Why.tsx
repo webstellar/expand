@@ -21,8 +21,8 @@ const Why: React.FC<pageProps> = ({ data }) => {
               <Image
                 src={data.whyusimage}
                 alt={data.whyus}
-                width={300}
-                height={300}
+                width={500}
+                height={500}
               />
             </>
           ) : (
