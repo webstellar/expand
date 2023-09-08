@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react";
+import { Dialog, Popover } from "@headlessui/react";
 
 import { HiBars3CenterLeft, HiXMark } from "react-icons/hi2";
 

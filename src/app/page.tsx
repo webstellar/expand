@@ -1,7 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
 import { getLandingPage } from "@/sanity/sanity-utils";
 import Hero from "@/components/hero/Hero";
 import Services from "@/components/services/Services";
